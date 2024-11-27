@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/minesweeper.css">
+    <title>Minesweeper</title>
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <div>
+        <label for="difficulty">Select Difficulty:</label>
+        <select id="difficulty" onchange="startGame()">
+            <option value="easy">Easy (8x8, 10 mines)</option>
+            <option value="medium" selected>Medium (12x12, 20 mines)</option>
+            <option value="hard">Hard (16x16, 40 mines)</option>
+        </select>
+    </div>
+    <div id="game-board"></div>
+    <button class="reset-button">Start Over</button>
+    <div id="result-modal">
+        <div id="modal-content">
+            <h2 id="result-message"></h2>
+            <button onclick="closeModal()">Play Again</button>
+        </div>
+    </div>
+    <script src="../games/minesweeper.js"></script>    
+</body>
+</html>
